@@ -1,22 +1,16 @@
 function setup() {
-    createCanvas(400, 400);
-
-    noLoop();
-    blendMode(OVERLAY)
+	createCanvas(800, 800);
+	background(20);
+	noLoop();
+	blendMode(OVERLAY);
+	//frameRate(10);
 }
 
 function draw() {
-    background(20);
 
 
-    let color = "yellow";
-    push();
-    translate(width / 2, height / 2);
-    waterdrop(color);
-    pop();
-
-
-
+	let colo = color(250 * random([0, 1]), 250 * random([0, 1]), 0);
+	waterdrop(width / 2, height / 2, 400, colo);
 
 }
 
@@ -24,11 +18,7 @@ function draw() {
 
 function mouseClicked() {
 
-	let color = "yellow";
-    push();
-    translate(mouseX, mouseY);
-    waterdrop(color);
-    pop();
-
+	let colo = color(250 * random([0, 1]), 250 * random([0, 1]), 200);
+	waterdrop(mouseX, mouseY, 400, colo);
 
 }
