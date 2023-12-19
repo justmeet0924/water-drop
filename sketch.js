@@ -24,9 +24,8 @@ function draw() {
 
 function mouseClicked() {
 
+	let color = "yellow";
     push();
-    let color = color(250 * random(), 250, 0);
-    console.log(color)
     translate(mouseX, mouseY);
     waterdrop(color);
     pop();
